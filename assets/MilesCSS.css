@@ -1,0 +1,18 @@
+#div1 {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+  }
+  ul li {
+    list-style-type: none;
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1{
+      text-align: center;
+  }

@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+ul li {
+  list-style-type: none;
+}
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+	text-align: center;
+}
+
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+  
+function drag(ev) {
+    ev.dataTransfer.setData("txt", ev.target.id);
+}
+
+function drop1(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("txt");
+    const dragged = document.getElementById(data);
+    const copied = document.getElementById(data).cloneNode(true);
+    
+    if (dragged.alt == "drag1"){
+        copied.id = "newId"; /* We cannot use the same ID */
+        ev.target.appendChild(copied);
+    }
+}
+function drop2(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("txt");
+    const dragged = document.getElementById(data);
+    const copied = document.getElementById(data).cloneNode(true);
+    
+    if (dragged.alt == "drag2"){
+        copied.id = "newId"; /* We cannot use the same ID */
+        ev.target.appendChild(copied);
+    }
+}
+function drop3(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("txt");
+    const dragged = document.getElementById(data);
+    const copied = document.getElementById(data).cloneNode(true);
+    
+    if (dragged.alt == "drag3"){
+        copied.id = "newId"; /* We cannot use the same ID */
+        ev.target.appendChild(copied);
+    }
+}
+function drop4(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("txt");
+    const dragged = document.getElementById(data);
+    const copied = document.getElementById(data).cloneNode(true);
+    
+    if (dragged.alt == "drag4"){
+        copied.id = "newId"; /* We cannot use the same ID */
+        ev.target.appendChild(copied);
+    }
+}
+function drop5(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("txt");
+    const dragged = document.getElementById(data);
+    const copied = document.getElementById(data).cloneNode(true);
+    
+    if (dragged.alt == "drag5"){
+        copied.id = "newId"; /* We cannot use the same ID */
+        ev.target.appendChild(copied);
+    }
+}
+function removeReward(ev){
+    ev.preventDefault();
+    console.log(ev.target.id);
+    if (ev.target.id == "newId"){
+        var image_x = document.getElementById('newId');
+        image_x.parentNode.removeChild(newId);
+    }
+}
+</script>
+</head>
+<body>
+    <div class = "container">
+        <section class="drag-reward">
+            <ul class = "reward">
+            	
+            	<h1>Rewards</h1>
+                <br>
+                <li><img id="drag1" alt="drag1" src="http://placehold.it/69x69/c9112d/fff&text=1" draggable="true" ondragstart="drag(event)" onclick="removeReward(event)" width="70" height="70"></li>
+                <br>
+                <li><img id="drag2" alt="drag2"src="http://placehold.it/69x69/E68500/fff&text=2" draggable="true" ondragstart="drag(event)" onclick="removeReward(event)" width="70" height="70"></li>
+                <br>
+                <li><img id="drag3" alt="drag3"src="http://placehold.it/69x69/00810C/fff&text=3" draggable="true" ondragstart="drag(event)" onclick="removeReward(event)" width="70" height="70"></li>
+                <br>
+                <li><img id="drag4" alt="drag4" src="http://placehold.it/69x69/337AFF/fff&text=4" draggable="true" ondragstart="drag(event)" onclick="removeReward(event)" width="70" height="70"></li>
+                <br>
+                <li><img id="drag5" alt="drag5" src="http://placehold.it/69x69/AF33FF/fff&text=5" draggable="true" ondragstart="drag(event)" onclick="removeReward(event)" width="70" height="70"></li>
+                <br>
+            </ul>
+        </section>
+        <section class="drop1">
+            <ul class = "drop-column1">
+            	<h1>C1</h1>
+                <li><div id="div1" ondrop="drop1(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop3(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop4(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop5(event)" ondragover="allowDrop(event)"></div></li>
+            </ul>
+        </section>
+        <section class="drop-column2">
+            <ul class = "column2">
+            	<h1>C2</h1>
+                <li><div id="div1" ondrop="drop1(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop3(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop4(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop5(event)" ondragover="allowDrop(event)"></div></li>
+            </ul>
+        </section>
+        <section class="drag-column3">
+            <ul class = "column3">
+            	<h1>C3</h1>
+                <li><div id="div1" ondrop="drop1(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop3(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop4(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop5(event)" ondragover="allowDrop(event)"></div></li>
+            </ul>
+        </section>
+        <section class="drag-column4">
+            <ul class = "column4">
+            	<h1>C4</h1>
+                <li><div id="div1" ondrop="drop1(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop3(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop4(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop5(event)" ondragover="allowDrop(event)"></div></li>
+            </ul>
+        </section>
+        <section class="drag-column5">
+            <ul class = "column5">
+            	<h1>C5</h1>
+                <li><div id="div1" ondrop="drop1(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop2(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop3(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop4(event)" ondragover="allowDrop(event)"></div></li>
+                <li><div id="div1" ondrop="drop5(event)" ondragover="allowDrop(event)"></div></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
